@@ -1,17 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from './components/ui/button'
+import { Route, Routes } from "react-router-dom"
+import AuthLayout from "./components/auth/layout"
+import Login from "./pages/auth/login"
+import Register from "./pages/auth/register"
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Button onClick={() => setCount((count) => count + 1)}> count is {count}</Button>
-    </>
-  )
+    <div className="flex flex-col overflow-hidden bg-white">
+      <Routes>
+        <Route path="/auth" element={<AuthLayout/>}>
+          <Route path="login" element={<Login/>}/>
+          <Route path="register" element={<Register/>}/>
+        </Route>
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
