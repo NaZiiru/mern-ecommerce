@@ -17,7 +17,7 @@ const NotFound = () => {
             choses à explorer sur la page d'accueil.
           </p>
           <Link
-            to="/"
+            to="/shop/home"
             className="inline-flex text-white bg-teal-950 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900 my-4"
           >
             Retour à la page d'accueil
